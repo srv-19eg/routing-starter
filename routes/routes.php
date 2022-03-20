@@ -1,9 +1,10 @@
 <?php
 use Pecee\SimpleRouter\SimpleRouter;
 
-SimpleRouter::get('/','ApiController@index');
-SimpleRouter::get('/latest/days/{days}','ApiController@latestDays');
-SimpleRouter::get('/latest/week','ApiController@latestWeeks');
-SimpleRouter::get('/latest/weeks/{weeks}','ApiController@latestWeeks');
-
-SimpleRouter::get('/secret/migrate','MigrationController@migrate');
+SimpleRouter::get('/','NotesController@index');
+SimpleRouter::get('/new','NotesController@new');
+SimpleRouter::post('/new','NotesController@store');
+SimpleRouter::get('/{id}','NotesController@show');
+SimpleRouter::get('/{id}/edit','NotesController@edit');
+SimpleRouter::get('/{id}/delete','NotesController@delete');
+SimpleRouter::post('/{id}','NotesController@update');

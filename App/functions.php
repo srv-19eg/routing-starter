@@ -1,7 +1,9 @@
 <?php
+// hjälpfunktioner helt enkelt
 
-function outputJson(array $data) {
-    header("Content-Type: application/json");
-    echo json_encode($data);
-    exit();
+function renderView(string $view, array $data=[]){
+    $loader = new \Twig\Loader\FilesystemLoader(ROOT.'/App/views');
+    $twig = new \Twig\Environment($loader);
+    $template = $twig->load($view);
+    echo $template->render($data);
 }

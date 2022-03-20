@@ -1,4 +1,4 @@
-# vaderlek-starter
+# router-starter
 Beskriv vilka som skapat projektet
 
 Beskriv vad projektet är för något
@@ -7,13 +7,12 @@ Beskriv hur man använder ert projekt
 
 ## Table of Contents
 - [Installation]
-  - Hosting requirements
+  - Requirements
   - Folder structure
   - Setting up database connection
   - Migrating
 - Usage
   - [Endpoints](#endpoints)
-- 
 - [Database](#database)
 
 ## Endpoints

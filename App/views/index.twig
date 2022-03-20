@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+    <h1>Index</h1>
+    <ul>
+        {% for note in notes %}
+            <li>
+                {{ note.title }} <a href="/{{ note.id }}/edit">edit</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

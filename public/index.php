@@ -5,9 +5,10 @@ use Pecee\Http\Request;
 use Pecee\SimpleRouter\SimpleRouter;
 
 define('ROOT', dirname(__DIR__));
+require_once(ROOT.'/App/functions.php');
 
 require_once ROOT . '/routes/routes.php';
-require_once ROOT . '/App/functions.php';
+
 
 SimpleRouter::setDefaultNamespace('\App\Controllers');
 
